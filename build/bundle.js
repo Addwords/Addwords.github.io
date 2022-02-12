@@ -401,12 +401,12 @@ var app = (function () {
     			p1 = element("p");
     			t10 = text(/*ws*/ ctx[2]);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file, 15, 0, 221);
+    			add_location(input0, file, 16, 0, 280);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file, 16, 0, 258);
-    			add_location(button, file, 17, 0, 295);
-    			add_location(p0, file, 18, 0, 344);
-    			add_location(p1, file, 19, 0, 371);
+    			add_location(input1, file, 17, 0, 317);
+    			add_location(button, file, 18, 0, 354);
+    			add_location(p0, file, 19, 0, 403);
+    			add_location(p1, file, 20, 0, 430);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -488,7 +488,9 @@ var app = (function () {
     	let a = 1;
     	let b = 2;
     	let ws = 'socket open~';
-    	let socket = new WebSocket(`ws://localhost:8081`);
+
+    	// let socket = new WebSocket(`ws://localhost:8081`);
+    	let socket = new WebSocket(`ws://34.82.186.127:8081`);
 
     	socket.onmessage = evt => {
     		$$invalidate(2, ws = evt.data);
