@@ -490,7 +490,7 @@ var app = (function () {
     	let ws = 'socket open~';
 
     	// let socket = new WebSocket(`ws://localhost:8081`);
-    	let socket = new WebSocket(`ws://34.82.186.127:8081`);
+    	let socket = new WebSocket(`ws://eodud.kr:8081`);
 
     	socket.onmessage = evt => {
     		$$invalidate(2, ws = evt.data);
